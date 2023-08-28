@@ -63,13 +63,13 @@ pdf.ln()
 
 
 # Agregar la primera imagen después de la tabla
-pdf.image(FOLDER_IMG+list_of_images[0], pdf.x, pdf.y, pdf.w-30, pdf.h)
+pdf.image(FOLDER_IMG+list_of_images[0], pdf.x, pdf.y, pdf.w-30, pdf.h-60)
 
 # Agregar el resto de las imágenes
 for image in list_of_images[1:]:
     pdf.add_page()
     image_path = FOLDER_IMG+image
-    pdf.image(image_path, pdf.x, pdf.y, pdf.w-30, pdf.h)
+    pdf.image(image_path, pdf.x, pdf.y, pdf.w-30, pdf.h-30)
 
 name_doc_input = input("Ingrese el nombre del Documento -> ")
 name_doc_output = name_doc_input + " - ("+CARNE+").pdf"
